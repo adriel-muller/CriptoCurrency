@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cotação de Criptomoedas</title>
+    <!-- Importando o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Cotação de Criptomoedas</h1>
+    <div class="container">
+        <!-- Mostra a cotação atual -->
+        <div id="current-prices" class="form-group">
+            <h3>Cotações Atuais:</h3>
+            <p id="btc-price">Bitcoin: Carregando...</p>
+            <p id="eth-price">Ethereum: Carregando...</p>
+        </div>
+
+        <!-- Formulário para o usuário inserir o investimento -->
+        <div class="form-group">
+            <label for="investmentBTC">Investimento em Bitcoin (USD):</label>
+            <input type="number" id="investmentBTC" step="0.01" placeholder="Insira o valor em USD">
+        </div>
+        <div class="form-group">
+            <label for="btcBuyPrice">Cotação do Bitcoin na compra (USD):</label>
+            <input type="number" id="btcBuyPrice" step="0.01" placeholder="Insira a cotação em USD">
+        </div>
+        <div class="form-group">
+            <label for="investmentETH">Investimento em Ethereum (USD):</label>
+            <input type="number" id="investmentETH" step="0.01" placeholder="Insira o valor em USD">
+        </div>
+        <div class="form-group">
+            <label for="ethBuyPrice">Cotação do Ethereum na compra (USD):</label>
+            <input type="number" id="ethBuyPrice" step="0.01" placeholder="Insira a cotação em USD">
+        </div>
+        <button onclick="calculateProfitOrLoss()">Calcular Lucro/Prejuízo</button>
+
+        <!-- Mostra o lucro ou prejuízo calculado -->
+        <div id="result" class="result" style="display: none;">
+            <h3>Resultados:</h3>
+            <p id="btcResult"></p>
+            <p id="ethResult"></p>
+        </div>
+    </div>
+
+    <!-- Importando o arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
